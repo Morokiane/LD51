@@ -75,14 +75,6 @@ func Swing():
 func SwingFinish():
 	state = move
 
-func _on_Hitbox_area_entered(area):
-	if area.is_in_group("enemy"):
-		GameController.playerLives -= 0.25
-		if GameController.playerLives <= 0:
-# warning-ignore:return_value_discarded
-			get_tree().reload_current_scene()
-			GameController.playerLives = 4
-
 func TimerTimeout():
 	if lightOn:
 		light.energy = 0
@@ -96,3 +88,11 @@ func TimerTimeout():
 		GameController.inLight = true
 		GameController.lanternEnergy -= 0.25
 		GameController.lanternSize -= 0.333
+
+func _on_Hitbox_area_entered(area):
+	if area.is_in_group("enemy"):
+		GameController.playerHealth -= 0.25
+		if GameController.playerHealth <= 0:
+# warning-ignore:return_value_discarded
+			get_tree().reload_current_scene()
+			GameController.playerHealth = 4

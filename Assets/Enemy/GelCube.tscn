@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/FlyingEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/GelCube.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SpriteSheets/gelcube.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -91,6 +91,7 @@ scale = Vector2( 0.5625, 0.666667 )
 [node name="Hurtbox" type="Area2D" parent="." groups=["enemy"]]
 position = Vector2( 0, -3 )
 collision_layer = 4
+collision_mask = 2
 __meta__ = {
 "_editor_description_": "Gets damage from player"
 }

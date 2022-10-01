@@ -18,9 +18,6 @@ enum {
 	attack
 }
 
-func _ready():
-	pass
-
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, 140 * delta)
 	knockback = move_and_slide(knockback)
@@ -56,7 +53,6 @@ func _on_Detector_body_exited(body):
 		player = null
 
 func _on_Hitbox_area_entered(area):
-	print("hit")
 	knockback = area.knockbackVector * 120
 	hp -= 1
 	if hp <= 0:
