@@ -31,7 +31,7 @@ func _physics_process(_delta):
 			Swing()
 	
 func _process(_delta):
-	if GameController.matches > 0 && !lightOn && Input.is_action_just_pressed("X"):
+	if GameController.matches > 0 && !lightOn && Input.is_action_just_pressed("A"):
 		lightOn = true
 		light.energy = 1
 		GameController.matches -= 1
@@ -78,6 +78,6 @@ func TimerTimeout():
 	if lightOn:
 		light.energy = 0
 		lightOn = false
-#	else:
-#		light.energy = 1
-#		lightOn = true
+	elif !lightOn && !GameController.inLight:
+		GameController.playerHealth -= 1
+		print(GameController.playerHealth)

@@ -600,6 +600,7 @@ shadow_gradient_length = 10.0
 [node name="swing" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="swing"]
+visible = false
 position = Vector2( 5, 0 )
 shape = SubResource( 37 )
 

@@ -12,6 +12,7 @@ func _process(_delta):
 		anim.visible = true
 		light.visible = true
 		occlude.visible = false
+		GameController.inLight = true
 		timer.start()
 
 func _on_Area2D_body_entered(body):
@@ -26,3 +27,14 @@ func _on_Timer_timeout():
 	anim.visible = false
 	light.visible = false
 	occlude.visible = true
+	GameController.inLight = false
+
+func _on_Detector_body_entered(body):
+	if body is Player && light.visible:
+		GameController.inLight = true
+		print("in the light")
+
+func _on_Detector_body_exited(body):
+	if body is Player:
+		GameController.inLight = false
+		print("forsaken to darkness")
