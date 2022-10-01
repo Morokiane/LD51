@@ -3,6 +3,7 @@ class_name Player
 
 onready var animTree = $AnimationTree
 onready var animState = animTree.get("parameters/playback")
+onready var swordHitbox = $Sword
 onready var light = $Match
 onready var timer = $Timer
 
@@ -20,7 +21,7 @@ var swordVector = Vector2.ZERO
 func _ready():
 	timer.set_wait_time(10)
 	timer.start()
-#	swordHitbox.knockbackVector = swordVector
+	swordHitbox.knockbackVector = swordVector
 
 func _physics_process(_delta):
 #	call the function state
@@ -50,7 +51,7 @@ func Move():
 	input.y = Input.get_axis("up", "down")
 	
 	if input != Vector2.ZERO:
-#		swordHitbox.knockbackVector = inputMovement
+		swordHitbox.knockbackVector = input
 		animTree.set("parameters/idle/blend_position", input)
 		animTree.set("parameters/walk/blend_position", input)
 		animTree.set("parameters/swing/blend_position", input)
@@ -82,9 +83,6 @@ func _on_Hitbox_area_entered(area):
 			get_tree().reload_current_scene()
 			GameController.playerLives = 4
 
-func Lantern():
-	pass
-
 func TimerTimeout():
 	if lightOn:
 		light.energy = 0
@@ -98,4 +96,3 @@ func TimerTimeout():
 		GameController.inLight = true
 		GameController.lanternEnergy -= 0.25
 		GameController.lanternSize -= 0.333
-#	
