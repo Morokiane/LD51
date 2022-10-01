@@ -52,7 +52,7 @@ radius = 49.0102
 
 [node name="GelCube" type="KinematicBody2D"]
 collision_layer = 4
-collision_mask = 20
+collision_mask = 21
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

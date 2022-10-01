@@ -1,13 +1,14 @@
 extends Area2D
 
 onready var sprite = $Sprite
+onready var col = $StaticBody2D/CollisionShape2D
 
 var canOpenDoor = false
 
 func _process(_delta):
 	if Input.is_action_just_pressed("X") && GameController.hasKey && canOpenDoor:
 		sprite.frame = 1
-		$StaticBody2D.visible = false
+		col.disabled = true
 		GameController.hasKey = false
 
 func _on_Door_body_entered(body):

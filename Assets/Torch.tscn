@@ -61,7 +61,7 @@ visible = false
 z_index = 1
 frames = SubResource( 9 )
 animation = "flame"
-frame = 6
+frame = 7
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
