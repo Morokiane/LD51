@@ -8,11 +8,13 @@ onready var timer = $Timer
 var canLight = false
 
 func _process(_delta):
+	#torch lighting
 	if Input.is_action_just_pressed("X") && canLight && GameController.matches > 0:
 		anim.visible = true
 		light.visible = true
 		occlude.visible = false
 		GameController.inLight = true
+		GameController.matches -= 1
 		timer.start()
 
 func _on_Area2D_body_entered(body):

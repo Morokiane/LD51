@@ -35,6 +35,10 @@ func _process(_delta):
 		lightOn = true
 		light.energy = 1
 		GameController.matches -= 1
+		
+	if Input.is_action_just_pressed("Y"):
+		GameController.pips -= 1
+		print(GameController.pips)
 	
 func Move():
 	var input = Vector2.ZERO
@@ -79,5 +83,5 @@ func TimerTimeout():
 		light.energy = 0
 		lightOn = false
 	elif !lightOn && !GameController.inLight:
-		GameController.playerHealth -= 1
+		GameController.playerHealth -= 0.25
 		print(GameController.playerHealth)

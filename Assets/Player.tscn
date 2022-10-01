@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("swing/CollisionShape2D:disabled")
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,10 +32,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("swing/CollisionShape2D:rotation_degrees")
+tracks/2/path = NodePath("Swing/CollisionShape2D:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -47,7 +47,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("swing/CollisionShape2D:position")
+tracks/3/path = NodePath("Swing/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -89,7 +89,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("swing/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Swing/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -101,7 +101,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("swing/CollisionShape2D:position")
+tracks/3/path = NodePath("Swing/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -113,7 +113,7 @@ tracks/3/keys = {
 "values": [ Vector2( -4, -7 ), Vector2( 5, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("swing/CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("Swing/CollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -155,7 +155,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("swing/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Swing/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -167,7 +167,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("swing/CollisionShape2D:position")
+tracks/3/path = NodePath("Swing/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -179,7 +179,7 @@ tracks/3/keys = {
 "values": [ Vector2( -1, -1 ), Vector2( -5, -12 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("swing/CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("Swing/CollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -221,7 +221,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("swing/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Swing/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -233,7 +233,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("swing/CollisionShape2D:position")
+tracks/3/path = NodePath("Swing/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -245,7 +245,7 @@ tracks/3/keys = {
 "values": [ Vector2( 3, -2 ), Vector2( 3, -14 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("swing/CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("Swing/CollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -287,7 +287,7 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("swing/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Swing/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -299,7 +299,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("swing/CollisionShape2D:position")
+tracks/3/path = NodePath("Swing/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -311,7 +311,7 @@ tracks/3/keys = {
 "values": [ Vector2( 4, -6 ), Vector2( 5, -16 ), Vector2( -1, -16 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("swing/CollisionShape2D:rotation_degrees")
+tracks/4/path = NodePath("Swing/CollisionShape2D:rotation_degrees")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -354,6 +354,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 12 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=9]
 resource_name = "idleRight"
@@ -370,6 +382,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 4 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "idleUp"
@@ -385,6 +409,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -403,6 +439,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=12]
 resource_name = "walkLeft"
@@ -419,6 +467,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 12, 13, 14, 15 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=13]
@@ -437,6 +497,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 4, 5, 6, 7 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=14]
 resource_name = "walkUp"
@@ -453,6 +525,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 8, 9, 10, 11 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Swing/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=20]
@@ -591,17 +675,18 @@ parameters/swing/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="Match" type="Light2D" parent="."]
+visible = false
 texture = ExtResource( 3 )
 shadow_enabled = true
 shadow_gradient_length = 10.0
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="swing" type="Area2D" parent="."]
+[node name="Swing" type="Area2D" parent="." groups=["swing"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="swing"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Swing"]
 position = Vector2( 5, 0 )
 shape = SubResource( 37 )
+disabled = true
 
 [connection signal="timeout" from="Timer" to="." method="TimerTimeout"]
