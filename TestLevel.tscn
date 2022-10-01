@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tilemaps/DungeonTileMap.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Torch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/SpriteSheets/DungeonStuff.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Pot2.tscn" type="PackedScene" id=8]
 
 [sub_resource type="OccluderPolygon2D" id=7]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -134,3 +135,6 @@ position = Vector2( 232, 113 )
 
 [node name="Pot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 88, 57 )
+
+[node name="Pot2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 92, 133 )
