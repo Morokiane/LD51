@@ -10,6 +10,7 @@ onready var playerHP = $PlayerHP
 onready var battery = $Battery
 onready var meter = $Meter
 onready var key = $Key
+onready var chestKey = $ChestKey
 
 func _ready():
 	for i in GameController.playerHealth:
@@ -29,10 +30,22 @@ func _process(_delta):
 	
 	if GameController.hasKey:
 		key.visible = true
+	else:
+		key.visible = false
+	
+	if GameController.hasChestKey:
+		chestKey.visible = true
+	else:
+		chestKey.visible = false
 		
 	if GameController.hasLantern:
 		meter.visible = true
 		battery.visible = true
+	
+	if GameController.pips <= 0:
+		meter.visible = false
+		battery.visible = false
+		GameController.hasLantern = false
 
 	for heart in playerHP.get_children():
 		var index = heart.get_index()

@@ -12,11 +12,11 @@ var opened = false
 func _ready():
 	assert(object != null)
 	
-
 func _process(_delta):
-	if canOpen && Input.is_action_just_pressed("A") && !opened:
+	if canOpen && Input.is_action_just_pressed("A") && !opened && GameController.hasChestKey:
 		sprite.frame = 1
 		opened = true
+		GameController.hasChestKey = false
 		Loot()
 
 func _on_Chest_body_entered(body):

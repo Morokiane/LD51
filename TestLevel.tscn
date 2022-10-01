@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tilemaps/DungeonTileMap.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Assets/Pickups/Matchbook.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Pickups/Key.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Pickups/Lantern.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Door.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Pickups/ChestKey.tscn" type="PackedScene" id=14]
 
 [sub_resource type="OccluderPolygon2D" id=7]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -119,6 +121,7 @@ format = 1
 tile_data = PoolIntArray( 196623, 0, 3, 262159, 0, 65539, 327695, 0, 131075, 393221, 0, 65538, 458760, 0, 131072, 458766, 0, 2, 524299, 0, 0, 589835, 0, 65536 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -166,3 +169,9 @@ position = Vector2( 116, 137 )
 
 [node name="Lantern" parent="." instance=ExtResource( 12 )]
 position = Vector2( 130, 59 )
+
+[node name="Door" parent="." instance=ExtResource( 13 )]
+position = Vector2( 226, 32 )
+
+[node name="Key2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 274, 42 )
