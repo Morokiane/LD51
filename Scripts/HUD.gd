@@ -7,7 +7,9 @@ const pipOffset = 16
 
 onready var coinNum = $CoinNum
 onready var playerHP = $PlayerHP
+onready var battery = $Battery
 onready var meter = $Meter
+onready var key = $Key
 
 func _ready():
 	for i in GameController.playerHealth:
@@ -23,7 +25,14 @@ func _ready():
 		meter.add_child(newPip)
 
 func _process(_delta):
-	coinNum.text = String(GameController.matches)
+	coinNum.text = String("%02d" % GameController.matches)
+	
+	if GameController.hasKey:
+		key.visible = true
+		
+	if GameController.hasLantern:
+		meter.visible = true
+		battery.visible = true
 
 	for heart in playerHP.get_children():
 		var index = heart.get_index()

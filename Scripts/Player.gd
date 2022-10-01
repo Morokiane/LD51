@@ -16,6 +16,8 @@ var velocity = Vector2.ZERO
 var state = move
 var lightOn = true
 var swordVector = Vector2.ZERO
+var maxEnergy = 1.5
+var lanternEnergy = maxEnergy
 
 func _ready():
 	timer.set_wait_time(10)
@@ -35,10 +37,11 @@ func _process(_delta):
 		lightOn = true
 		light.energy = 1
 		GameController.matches -= 1
-		
-	if Input.is_action_just_pressed("Y"):
-		GameController.pips -= 1
-		print(GameController.pips)
+	
+	if GameController.hasLantern:
+		lightOn = true
+		light.energy = GameController.lanternEnergy
+		light.texture_scale = 2
 	
 func Move():
 	var input = Vector2.ZERO
@@ -78,6 +81,9 @@ func _on_Hitbox_area_entered(area):
 			get_tree().reload_current_scene()
 			GameController.playerLives = 4
 
+func Lantern():
+	pass
+
 func TimerTimeout():
 	if lightOn:
 		light.energy = 0
@@ -85,3 +91,10 @@ func TimerTimeout():
 	elif !lightOn && !GameController.inLight:
 		GameController.playerHealth -= 0.25
 		print(GameController.playerHealth)
+	
+	if GameController.hasLantern && GameController.pips > 0:
+		GameController.pips -= 1
+		GameController.inLight = true
+		GameController.lanternEnergy -= 0.25
+		light.texture_scale -= 0.333
+		print(light.energy)

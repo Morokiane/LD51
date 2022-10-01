@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/SpriteSheets/Dungeon.png" type="Texture" id=1]
 
@@ -26,6 +26,12 @@ polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="OccluderPolygon2D" id=39]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
+[sub_resource type="OccluderPolygon2D" id=48]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=49]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
 [sub_resource type="OccluderPolygon2D" id=40]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -33,6 +39,9 @@ polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=42]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=50]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=43]
@@ -134,6 +143,15 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="ConvexPolygonShape2D" id=47]
 points = PoolVector2Array( 0, 11.3516, 16, 11.5131, 16, 16, 0, 16 )
 
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
 [sub_resource type="TileSet" id=1]
 0/name = "Dungeon.png 0"
 0/texture = ExtResource( 1 )
@@ -144,7 +162,7 @@ points = PoolVector2Array( 0, 11.3516, 16, 11.5131, 16, 16, 0, 16 )
 0/autotile/icon_coordinate = Vector2( 0, 0 )
 0/autotile/tile_size = Vector2( 16, 16 )
 0/autotile/spacing = 0
-0/autotile/occluder_map = [ Vector2( 1, 1 ), SubResource( 32 ), Vector2( 1, 5 ), SubResource( 33 ), Vector2( 1, 6 ), SubResource( 34 ), Vector2( 2, 1 ), SubResource( 35 ), Vector2( 2, 5 ), SubResource( 36 ), Vector2( 2, 6 ), SubResource( 37 ), Vector2( 3, 1 ), SubResource( 38 ), Vector2( 6, 4 ), SubResource( 39 ), Vector2( 9, 1 ), SubResource( 40 ), Vector2( 9, 2 ), SubResource( 41 ), Vector2( 9, 3 ), SubResource( 42 ), Vector2( 10, 1 ), SubResource( 43 ), Vector2( 10, 2 ), SubResource( 44 ), Vector2( 11, 1 ), SubResource( 45 ), Vector2( 11, 2 ), SubResource( 46 ) ]
+0/autotile/occluder_map = [ Vector2( 1, 1 ), SubResource( 32 ), Vector2( 1, 5 ), SubResource( 33 ), Vector2( 1, 6 ), SubResource( 34 ), Vector2( 2, 1 ), SubResource( 35 ), Vector2( 2, 5 ), SubResource( 36 ), Vector2( 2, 6 ), SubResource( 37 ), Vector2( 3, 1 ), SubResource( 38 ), Vector2( 6, 4 ), SubResource( 39 ), Vector2( 7, 4 ), SubResource( 48 ), Vector2( 8, 4 ), SubResource( 49 ), Vector2( 9, 1 ), SubResource( 40 ), Vector2( 9, 2 ), SubResource( 41 ), Vector2( 9, 3 ), SubResource( 42 ), Vector2( 9, 4 ), SubResource( 50 ), Vector2( 10, 1 ), SubResource( 43 ), Vector2( 10, 2 ), SubResource( 44 ), Vector2( 11, 1 ), SubResource( 45 ), Vector2( 11, 2 ), SubResource( 46 ) ]
 0/autotile/navpoly_map = [  ]
 0/autotile/priority_map = [  ]
 0/autotile/z_index_map = [ Vector3( 1, 4, 1 ), Vector3( 2, 4, 1 ), Vector3( 2, 5, 1 ), Vector3( 3, 4, 1 ), Vector3( 6, 4, 1 ) ]
@@ -328,6 +346,24 @@ points = PoolVector2Array( 0, 11.3516, 16, 11.5131, 16, 16, 0, 16 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 4 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 9, 4 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 7, 4 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0

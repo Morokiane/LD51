@@ -9,7 +9,7 @@ func _on_Pot_area_entered(area):
 		var potFX = pot.instance()
 		get_parent().add_child(potFX)
 		potFX.global_position = global_position
-		LootGeneration()
+#		LootGeneration()
 		queue_free()
 		
 func LootGeneration():

@@ -675,7 +675,6 @@ parameters/swing/blend_position = Vector2( 0, 0 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="Match" type="Light2D" parent="."]
-visible = false
 texture = ExtResource( 3 )
 shadow_enabled = true
 shadow_gradient_length = 10.0
