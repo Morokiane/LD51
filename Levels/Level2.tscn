@@ -239,6 +239,10 @@ position = Vector2( 248, -80 )
 [node name="Respawn2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 436, 104 )
 
+[node name="Respawn3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 480, -11 )
+rotation = 1.5708
+
 [node name="Matchbook" parent="." instance=ExtResource( 17 )]
 position = Vector2( 552, -96 )
 
