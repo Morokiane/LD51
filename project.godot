@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LD51 - Matchless Dungeon"
-config/description="Every 10 seconds"
+config/description="Every 10 seconds something happens."
 run/main_scene="res://Menu.tscn"
 boot_splash/image="res://BSS.png"
 boot_splash/use_filter=false
@@ -35,8 +35,9 @@ GameController="*res://Scripts/GameController.gd"
 
 window/size/width=320
 window/size/height=180
-window/size/test_width=960
-window/size/test_height=544
+window/size/fullscreen=true
+window/size/test_width=1920
+window/size/test_height=1080
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -71,6 +72,11 @@ texture={
 
 [input]
 
+ui_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 ui_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)

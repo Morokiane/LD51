@@ -1,12 +1,12 @@
 extends Node
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 
 var tutorial = true
 var playerHealth = 3
-var hasSword = true
+var hasSword = false
 var hasLantern = false
 var lanternEnergy = 0
 var lanternSize = 0

@@ -52,7 +52,7 @@ func _process(_delta):
 		
 	if GameController.playerHealth <= 0:
 # warning-ignore:return_value_discarded
-		get_tree().change_scene("res://Levels/Level1.tscn")
+		GG()
 	
 func Move():
 	var input = Vector2.ZERO
@@ -104,7 +104,10 @@ func _on_Hitbox_area_entered(area):
 		hitFX.play()
 		if GameController.playerHealth <= 0:
 # warning-ignore:return_value_discarded
-			get_tree().change_scene("res://End.tscn")
+			GG()
 	
 func Spawn():
 	self.position = GameController.destination
+
+func GG():
+	get_tree().change_scene("res://End.tscn")

@@ -687,6 +687,8 @@ shadow_enabled = true
 shadow_gradient_length = 10.0
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
 
 [node name="Sword" type="Area2D" parent="." groups=["swing"]]
 collision_layer = 16

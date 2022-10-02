@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SpriteSheets/DungeonStuff.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Assets/Pickups/ChestKey.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/PressurePlate.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/Torch.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Assets/Pickups/Matchbook.tscn" type="PackedScene" id=17]
 
 [sub_resource type="OccluderPolygon2D" id=7]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -129,7 +130,6 @@ format = 1
 tile_data = PoolIntArray( -655331, 0, 7, -655330, 0, 8, -589795, 0, 7, -589794, 0, 8, -524273, 0, 65542, -524259, 0, 65543, -524258, 0, 65544, -458723, 0, 131079, -458722, 0, 131080, -393203, 0, 65542, -393199, 0, 65542, -327665, 0, 2, -327660, 0, 65542, -327659, 0, 65540, -327657, 0, 65541, -262132, 0, 65542, -262128, 0, 65542, -262116, 0, 65540, -196579, 0, 65540, 196610, 0, 2, 196611, 0, 131073, 196613, 0, 131073, 196637, 0, 65542, 327694, 0, 2, 327709, 0, 65541, 393221, 0, 65538, 458760, 0, 131072, 458762, 0, 65540, 458763, 0, 4, 458764, 0, 4, 458765, 0, 65540, 458767, 0, 5, 458768, 0, 6, 458769, 0, 4, 458770, 0, 6 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -151,6 +151,9 @@ destinationCoord = Vector2( 568, -104 )
 
 [node name="Pot" parent="Pots" instance=ExtResource( 8 )]
 position = Vector2( 32, 120 )
+
+[node name="Pot5" parent="Pots" instance=ExtResource( 8 )]
+position = Vector2( 32, 128 )
 
 [node name="Pot2" parent="Pots" instance=ExtResource( 8 )]
 position = Vector2( 200, -120 )
@@ -235,6 +238,12 @@ position = Vector2( 248, -80 )
 
 [node name="Respawn2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 436, 104 )
+
+[node name="Matchbook" parent="." instance=ExtResource( 17 )]
+position = Vector2( 552, -96 )
+
+[node name="Matchbook2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 296, -40 )
 
 [connection signal="body_entered" from="ThePits/Pit2" to="ThePits/Pit2" method="_on_Pit_body_entered"]
 
