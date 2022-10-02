@@ -254,3 +254,4 @@ position = Vector2( 296, -40 )
 [editable path="ThePits/Pit"]
 [editable path="ThePits/Pit3"]
 [editable path="ThePits/Pit4"]
+[editable path="Respawn3"]
