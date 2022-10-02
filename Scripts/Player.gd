@@ -6,6 +6,7 @@ onready var animState = animTree.get("parameters/playback")
 onready var swordHitbox = $Sword
 onready var light = $Match
 onready var timer = $Timer
+onready var hitFX = $SFX/Hit
 
 enum {
 	move,
@@ -32,18 +33,16 @@ func _physics_process(_delta):
 			Swing()
 	
 func _process(_delta):
-	if GameController.matches > 0 && !lightOn && Input.is_action_just_pressed("A"):
+	if GameController.matches > 0 && !lightOn && Input.is_action_just_pressed("B"):
 		lightOn = true
 		light.energy = 1
+		light.texture_scale = 1
 		GameController.matches -= 1
 	
 	if GameController.hasLantern:
 		lightOn = true
 		light.energy = GameController.lanternEnergy
 		light.texture_scale = GameController.lanternSize
-#		light.texture_scale = 2
-	if Input.is_action_just_pressed("Y"):
-		GameController.pips -= 1
 	
 func Move():
 	var input = Vector2.ZERO
@@ -92,6 +91,7 @@ func TimerTimeout():
 func _on_Hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
 		GameController.playerHealth -= 0.25
+		hitFX.play()
 		if GameController.playerHealth <= 0:
 # warning-ignore:return_value_discarded
 			get_tree().reload_current_scene()

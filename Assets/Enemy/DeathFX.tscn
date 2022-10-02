@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/DestroyObject.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SpriteSheets/EnemyDeath.png" type="Texture" id=2]
+[ext_resource path="res://SFX/EnemyDeath.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -44,3 +45,6 @@ hframes = 10
 autoplay = "active"
 anims/RESET = SubResource( 1 )
 anims/active = SubResource( 2 )
+
+[node name="BreakFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )

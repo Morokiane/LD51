@@ -3,6 +3,9 @@ extends KinematicBody2D
 onready var deathFX = preload("res://Assets/Enemy/DeathFX.tscn")
 onready var detector = $Detector
 onready var sprite = $Sprite
+onready var deathSFX = $SFX/DeathSFX
+onready var spottedFX = $SFX/SpottedFX
+onready var swingFX = $SFX/SwingFX
 
 var knockback = Vector2.ZERO
 var hp = 3
@@ -33,6 +36,7 @@ func _physics_process(delta):
 			else:
 				state = idle
 				player = null
+				spottedFX.stop()
 			
 	sprite.flip_h = velocity.x > 0
 	velocity = move_and_slide(velocity)
@@ -43,6 +47,7 @@ func PlayerDetect():
 func PlayerFound():
 	if PlayerDetect():
 		state = attack
+		spottedFX.play()
 
 func _on_Detector_body_entered(body):
 	if body.name == "Player":
@@ -55,7 +60,9 @@ func _on_Detector_body_exited(body):
 func _on_Hitbox_area_entered(area):
 	knockback = area.knockbackVector * 120
 	hp -= 1
+	swingFX.play()
 	if hp <= 0:
+		deathSFX.play()
 		var death = deathFX.instance()
 		get_parent().add_child(death)
 		death.global_position = $Hitbox.global_position

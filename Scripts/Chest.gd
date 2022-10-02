@@ -13,7 +13,7 @@ func _ready():
 	assert(object != null)
 	
 func _process(_delta):
-	if canOpen && Input.is_action_just_pressed("A") && !opened && GameController.hasChestKey:
+	if canOpen && Input.is_action_just_pressed("X") && !opened && GameController.hasChestKey:
 		sprite.frame = 1
 		opened = true
 		GameController.hasChestKey = false
@@ -28,6 +28,7 @@ func _on_Chest_body_exited(body):
 		canOpen = false
 		
 func Loot():
+	$Pop.play()
 	var loot: Node2D = object.instance()
 	owner.get_node("Chest/Objects").add_child(loot)
 

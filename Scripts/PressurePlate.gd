@@ -10,6 +10,7 @@ func _ready():
 func _on_PressurePlate_body_entered(body):
 	if body is Player:
 		sprite.frame = 1
+		$PressedFX.play()
 		Loot()
 
 func Loot():

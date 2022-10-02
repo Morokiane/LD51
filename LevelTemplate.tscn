@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/SpriteSheets/DungeonStuff.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Tilemaps/DungeonTileMap.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/LevelTransit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/controls.png" type="Texture" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=7]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -94,6 +95,9 @@ points = PoolVector2Array( 3.9375, 0, 11.9375, 0, 11.875, 13.9375, 3.9375, 13.87
 } ]
 0/z_index = 0
 
+[sub_resource type="CanvasItemMaterial" id=13]
+blend_mode = 3
+
 [node name="LevelTemplate" type="YSort"]
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
@@ -125,3 +129,14 @@ script = ExtResource( 2 )
 [node name="LevelTransit" parent="." instance=ExtResource( 6 )]
 position = Vector2( 600, 56 )
 levelPath = "res://TestLevel.tscn"
+
+[node name="Controls" type="Sprite" parent="."]
+show_behind_parent = true
+material = SubResource( 13 )
+position = Vector2( 176, 88 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 1
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
