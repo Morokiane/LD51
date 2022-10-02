@@ -4,6 +4,7 @@ extends Area2D
 export(PackedScene) var object: PackedScene = null
 
 onready var sprite = $Sprite
+onready var non = $Non
 onready var tween = $Tween
 
 var canOpen = false
@@ -18,11 +19,15 @@ func _process(_delta):
 		opened = true
 		GameController.hasChestKey = false
 		Loot()
+	elif canOpen && !GameController.hasChestKey && !opened:
+		non.visible = true
+	else:
+		non.visible = false
 
 func _on_Chest_body_entered(body):
 	if body is Player:
 		canOpen = true
-		
+
 func _on_Chest_body_exited(body):
 	if body is Player:
 		canOpen = false

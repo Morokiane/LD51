@@ -124,6 +124,7 @@ format = 1
 tile_data = PoolIntArray( 196623, 0, 3, 262159, 0, 65539, 327695, 0, 131075, 393221, 0, 65538, 458760, 0, 131072, 458766, 0, 2, 524299, 0, 0, 589835, 0, 65536 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]

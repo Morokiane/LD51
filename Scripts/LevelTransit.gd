@@ -8,11 +8,14 @@ onready var sprite = $Sprite
 var inDoor = false
 
 func _ready():
+	assert(levelPath != "")
+	assert(destinationCoord != Vector2())
+#	WriteCoords()
 	sprite.hide()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("X") && inDoor == true:
-		WriteCoords()
+		GameController.destination = destinationCoord
 		LoadLevel()
 
 func LoadLevel():

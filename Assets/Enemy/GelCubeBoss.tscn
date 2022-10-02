@@ -1,13 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Scripts/GelCube.gd" type="Script" id=1]
-[ext_resource path="res://Assets/SpriteSheets/gelcube.png" type="Texture" id=2]
+[ext_resource path="res://Assets/SpriteSheets/gelcube.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/GelCubeBoss.gd" type="Script" id=2]
 [ext_resource path="res://SFX/EnemyDeath.wav" type="AudioStream" id=3]
 [ext_resource path="res://SFX/Spotted.wav" type="AudioStream" id=4]
 [ext_resource path="res://SFX/FunnyHit.wav" type="AudioStream" id=5]
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 8, 6.5 )
+[sub_resource type="CircleShape2D" id=11]
+radius = 5.36514
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -48,24 +48,22 @@ resource_name = "death"
 extents = Vector2( 10, 8.5 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 13, 11.5 )
+extents = Vector2( 8, 6.5 )
 
-[sub_resource type="CircleShape2D" id=7]
-radius = 49.0102
-
-[node name="GelCube" type="KinematicBody2D"]
+[node name="GelCubeBoss" type="KinematicBody2D"]
+scale = Vector2( 3, 3 )
 collision_layer = 4
 collision_mask = 23
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -8 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -6.5 )
-shape = SubResource( 8 )
+position = Vector2( 0, -6.66667 )
+shape = SubResource( 11 )
 __meta__ = {
 "_editor_description_": "Environment collider"
 }
@@ -103,14 +101,6 @@ __meta__ = {
 position = Vector2( 0, -3.5 )
 shape = SubResource( 10 )
 
-[node name="Detector" type="Area2D" parent="."]
-position = Vector2( 0, -11 )
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
-position = Vector2( 0, 4 )
-shape = SubResource( 7 )
-
 [node name="SFX" type="Node" parent="."]
 
 [node name="DeathSFX" type="AudioStreamPlayer2D" parent="SFX"]
@@ -122,6 +112,8 @@ stream = ExtResource( 4 )
 [node name="SwingFX" type="AudioStreamPlayer2D" parent="SFX"]
 stream = ExtResource( 5 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
-[connection signal="body_entered" from="Detector" to="." method="_on_Detector_body_entered"]
-[connection signal="body_exited" from="Detector" to="." method="_on_Detector_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

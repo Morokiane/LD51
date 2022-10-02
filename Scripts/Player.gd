@@ -20,8 +20,14 @@ var lightOn = true
 var swordVector = Vector2.ZERO
 
 func _ready():
+	if GameController.destination == Vector2.ZERO:
+		return
+	else:
+		Spawn()
+		
 	timer.set_wait_time(10)
 	timer.start()
+	
 	swordHitbox.knockbackVector = swordVector
 
 func _physics_process(_delta):
@@ -43,6 +49,10 @@ func _process(_delta):
 		lightOn = true
 		light.energy = GameController.lanternEnergy
 		light.texture_scale = GameController.lanternSize
+		
+	if GameController.playerHealth <= 0:
+# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://Levels/Level1.tscn")
 	
 func Move():
 	var input = Vector2.ZERO
@@ -79,10 +89,10 @@ func TimerTimeout():
 		light.energy = 0
 		lightOn = false
 	elif !lightOn && !GameController.inLight:
-		GameController.playerHealth -= 0.25
+		GameController.playerHealth -= 1
 		print(GameController.playerHealth)
 	
-	if GameController.hasLantern && GameController.pips > 0:
+	if GameController.hasLantern:
 		GameController.pips -= 1
 		GameController.inLight = true
 		GameController.lanternEnergy -= 0.25
@@ -90,9 +100,11 @@ func TimerTimeout():
 
 func _on_Hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
-		GameController.playerHealth -= 0.25
+		GameController.playerHealth -= 0.5
 		hitFX.play()
 		if GameController.playerHealth <= 0:
 # warning-ignore:return_value_discarded
-			get_tree().reload_current_scene()
-			GameController.playerHealth = 4
+			get_tree().change_scene("res://End.tscn")
+	
+func Spawn():
+	self.position = GameController.destination

@@ -9,6 +9,7 @@ onready var x = $X
 
 var canLight = false
 
+
 func _process(_delta):
 	#torch lighting
 	if Input.is_action_just_pressed("X") && canLight && GameController.matches > 0:

@@ -150,10 +150,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 11.3516, 16, 11.5131, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=51]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 0, 9.04075, 16, 9.04075, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 0, 9.17534, 16, 9.04075, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=53]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -180,7 +180,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/autotile/occluder_map = [ Vector2( 1, 1 ), SubResource( 32 ), Vector2( 1, 5 ), SubResource( 33 ), Vector2( 1, 6 ), SubResource( 34 ), Vector2( 2, 1 ), SubResource( 35 ), Vector2( 2, 5 ), SubResource( 36 ), Vector2( 2, 6 ), SubResource( 37 ), Vector2( 3, 1 ), SubResource( 38 ), Vector2( 6, 4 ), SubResource( 39 ), Vector2( 7, 4 ), SubResource( 48 ), Vector2( 8, 4 ), SubResource( 49 ), Vector2( 8, 5 ), SubResource( 54 ), Vector2( 9, 1 ), SubResource( 40 ), Vector2( 9, 2 ), SubResource( 41 ), Vector2( 9, 3 ), SubResource( 42 ), Vector2( 9, 4 ), SubResource( 50 ), Vector2( 9, 5 ), SubResource( 55 ), Vector2( 10, 1 ), SubResource( 43 ), Vector2( 10, 2 ), SubResource( 44 ), Vector2( 11, 1 ), SubResource( 45 ), Vector2( 11, 2 ), SubResource( 46 ) ]
 0/autotile/navpoly_map = [  ]
 0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [ Vector3( 1, 4, 1 ), Vector3( 2, 4, 1 ), Vector3( 2, 5, 1 ), Vector3( 3, 4, 1 ), Vector3( 6, 4, 1 ) ]
+0/autotile/z_index_map = [ Vector3( 1, 4, 1 ), Vector3( 2, 4, 1 ), Vector3( 2, 5, 1 ), Vector3( 3, 4, 1 ), Vector3( 6, 4, 1 ), Vector3( 8, 4, 1 ), Vector3( 9, 4, 1 ) ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )

@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="LD51 - Matchless Dungeon"
 config/description="Every 10 seconds"
-run/main_scene="res://TestLevel.tscn"
+run/main_scene="res://Menu.tscn"
 boot_splash/image="res://BSS.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"

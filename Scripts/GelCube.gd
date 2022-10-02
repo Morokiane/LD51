@@ -8,11 +8,11 @@ onready var spottedFX = $SFX/SpottedFX
 onready var swingFX = $SFX/SwingFX
 
 var knockback = Vector2.ZERO
-var hp = 3
+export var hp = 3
 var velocity = Vector2.ZERO
-var speed = 50
-var maxSpeed = 150
-var friction = 30
+export var speed = 50
+export var maxSpeed = 150
+export var friction = 30
 var state = attack
 var player = null
 
